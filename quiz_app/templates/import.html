@@ -1,0 +1,13 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <h1>Import Person Data</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="myfile">Choose CSV file to upload:</label>
+            <input type="file" name="myfile" id="myfile">
+        </div>
+        <button type="submit" class="btn btn-primary">Import</button>
+    </form>
+{% endblock %}
